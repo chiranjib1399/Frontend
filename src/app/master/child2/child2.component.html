@@ -1,0 +1,10 @@
+<h4>Child2 Component</h4>
+<input type="text" [(ngModel)]="childData">
+<button (click)="sendToParent(childData)">Send Data to Parent</button>
+
+<button (click)="receiveDataFromChild()">Click to Receive Data</button>
+
+<br> <br>
+{{showData}}
+
+

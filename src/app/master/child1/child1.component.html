@@ -1,0 +1,6 @@
+<h4>Child1 Component</h4>
+<span>Data From parent is : </span> {{ dynamicData }}
+<br><br>
+<input type="text" [(ngModel)]="child1tochild2">
+<br><br>
+<button (click)="sendToChild2(child1tochild2)">Send data to child2</button>
