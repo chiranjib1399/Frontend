@@ -6,15 +6,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class GlobalService {
 
+  private dataSubject: BehaviorSubject<string> = new BehaviorSubject<string>('Child Data');
   constructor() { }
-
-  private dataSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
-
   getData() {
     return this.dataSubject.asObservable();
   }
-
-  
   sendDataToChild2(data: string){
     this.dataSubject.next(data);
   }
