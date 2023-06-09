@@ -1,10 +1,10 @@
 <h4>parent</h4>
+<input [(ngModel)]="inputData">
+<button (click)="sendDataToChild()">Send Data Child1</button>
+<br><br>
 <app-child1 [dynamicData]="parentData"></app-child1>
 <br><br>
-<input [(ngModel)]="inputData">
-<button (click)="sendDataToChild()">Send Data</button>
-
 <app-child2 (sendDataToParent)="receiveDataFromChild($event)"></app-child2>
 <br>
 <br>
- <span>Child2 Data is : </span>{{child2Data}}
+ <span>Data from Child2 to Parent is : </span>{{child2Data}}

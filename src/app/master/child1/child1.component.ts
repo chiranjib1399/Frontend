@@ -17,8 +17,7 @@ export class Child1Component implements OnInit {
 
   }
   sendToChild2(data: string){
- this.globalSerive.sendDataToChild2(data)
- this.router.navigate(['/master/child2'])
+ this.globalSerive.sendDataToChild2(data);
   }
 
 }
