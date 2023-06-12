@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GlobalService } from 'src/app/shared/global.service';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-child1',

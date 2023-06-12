@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { GlobalService } from 'src/app/shared/global.service';
+import { GlobalService } from 'src/app/services/global.service';
 
 @Component({
   selector: 'app-child2',
