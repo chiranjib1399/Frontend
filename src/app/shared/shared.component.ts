@@ -25,7 +25,10 @@ export class SharedComponent implements OnInit {
       }
     });
     dataRef.afterClosed().subscribe(res=>{
-      console.log(res)
+      if(res){
+        console.log(res);
+        
+      }
       
     })
   }

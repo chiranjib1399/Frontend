@@ -10,7 +10,6 @@ const routes: Routes = [
   {
     path: "master",loadChildren : () => import('./master/master.module').then(mod => mod.MasterModule), canActivate:[AuthGuard]
   },
-  {path: "todo-list", component:ToDoListComponent, canActivate:[AuthGuard]},
   {path:'shared', component:SharedComponent, canActivate:[AuthGuard]}
 ];
 
