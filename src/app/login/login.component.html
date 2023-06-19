@@ -1,4 +1,5 @@
-<form (ngSubmit)="login()" #loginForm="ngForm">
+<h4>Template driven LogIn</h4>
+<form (ngSubmit)="login($event)" #loginForm="ngForm">
     <div>
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" [(ngModel)]="username" required>

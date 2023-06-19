@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { Interceptor } from  './interceptors/interceptor'
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { SharedComponent } from './shared/shared.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { Login2Component } from './login2/login2.component';
 
 
 
@@ -21,14 +22,16 @@ import { LoginComponent } from './login/login.component';
     AuthComponent,
     ToDoListComponent,
     SharedComponent,
-    LoginComponent
+    LoginComponent,
+    Login2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

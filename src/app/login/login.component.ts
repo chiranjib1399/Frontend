@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -6,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
   username: string;
   password: string;
   rememberMe: boolean;
@@ -22,7 +22,9 @@ export class LoginComponent implements OnInit {
       this.password = storedPassword;
     }
   }
- login(){
+ login(form: NgForm){
+  console.log(form.value);
+  
   if (this.rememberMe) {
     localStorage.setItem('username', this.username);
     localStorage.setItem('password', this.password);
@@ -31,5 +33,6 @@ export class LoginComponent implements OnInit {
     localStorage.removeItem('password');
   }
  }
+
 
 }

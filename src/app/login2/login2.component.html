@@ -1,0 +1,15 @@
+ <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div>
+      <label>Enter name to add : </label>
+      <input type="text" formControlName="name">
+      <label></label>
+      <div *ngFor="let newControl of dynamicControlNames">
+        <label>{{ newControl }} :</label>
+        <input type="text" [formControlName]="newControl">
+         <button mat-icon-button color="warn" (click)="removeControl(newControl)">
+            <mat-icon>close</mat-icon>
+          </button>
+      </div>
+    </div>
+    <button type="submit" mat-button color="red"><mat-icon>add</mat-icon>Add</button>
+  </form>
