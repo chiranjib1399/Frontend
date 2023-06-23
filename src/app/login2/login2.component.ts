@@ -22,28 +22,28 @@ export class Login2Component implements OnInit {
     const valuesArray = Object.values(this.loginForm.value);
     const lastEle = valuesArray[valuesArray.length-1];
     const elem = lastEle as string;
-//   const value = this.loginForm.get('name').value;
-//  if(value && !this.dynamicControlNames.includes(value)){
-//   this.dynamicControlNames.push(value);
-//   this.loginForm.addControl(value, new FormControl(''));
-//   this.loginForm.get('name').setValue('')
-//  }
+  const value = this.loginForm.get('name').value;
+ if(value && !this.dynamicControlNames.includes(value)){
+  this.dynamicControlNames.push(value);
+  this.loginForm.addControl(value, new FormControl(''));
+  this.loginForm.get('name').setValue('')
+ }
  
 if(elem && !this.dynamicControlNames.includes(elem)){
   this.dynamicControlNames.push(elem);
   this.loginForm.addControl(elem,new FormControl(''));
   this.loginForm.reset();
-  this.loginForm.get(elem).setValue('good');
-  this.loginForm.get(elem).disable()
+  // this.loginForm.get(elem).setValue('');
+  // this.loginForm.get(elem).disable()
 
-}
-
+} 
+  
 }
   removeControl(controlName: string){
     const index = this.dynamicControlNames.indexOf(controlName);
   if (index !== -1) {
     this.dynamicControlNames.splice(index, 1); 
-    this.loginForm.removeControl(controlName); 
+    // this.loginForm.removeControl(controlName); 
   }
 
 }

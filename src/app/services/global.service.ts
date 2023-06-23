@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,5 +13,13 @@ export class GlobalService {
   }
   sendDataToChild2(data: string){
     this.dataSubject.next(data);
+  }
+
+  destroyComponent(component: any){
+  const destroy$ = new ReplaySubject<void>(1)
+  if(component.subcription){
+    component.subcription.push(destroy$)
+  }
+  return destroy$;
   }
 }
